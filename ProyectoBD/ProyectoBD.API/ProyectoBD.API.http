@@ -1,0 +1,6 @@
+@ProyectoBD.API_HostAddress = http://localhost:5189
+
+GET {{ProyectoBD.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
