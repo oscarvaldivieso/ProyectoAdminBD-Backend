@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProyectoBD.Repositories.Repositories;
 
-namespace ProyectoBD.Repositories.Repositories
+namespace ProyectoBD.BusinessLogic
 {
-    public interface IDatabaseRepository
+    public static class ServiceConfiguration
     {
-        Task CreateDatabaseAsync(string name);
+        
     }
 }

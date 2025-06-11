@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {}
+    "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
+    "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
         "projectName": "ProyectoBD.Entities",
-        "projectPath": "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
-        "packagesPath": "C:\\Users\\fa538\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\obj\\",
+        "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
+        "packagesPath": "C:\\Users\\Personal Computer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fa538\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Personal Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

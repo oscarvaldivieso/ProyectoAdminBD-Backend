@@ -1,5 +1,52 @@
 [
   {
+    "ContainingType": "ProyectoBD.API.Controllers.DatabaseController",
+    "Method": "Crear",
+    "RelativePath": "{nombre}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoBD.API.Controllers.TablesController",
+    "Method": "CrearTabla",
+    "RelativePath": "create-table/{databaseName}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "databaseName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "table",
+        "Type": "ProyectoBD.Repositories.Entities.CreateTable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoBD.API.Controllers.DatabaseController",
+    "Method": "TestConnection",
+    "RelativePath": "TestConnection",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ProyectoBD.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

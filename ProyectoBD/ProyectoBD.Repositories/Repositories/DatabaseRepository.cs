@@ -1,29 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+
 
 namespace ProyectoBD.Repositories.Repositories
 {
-    public class DatabaseRepository : IDatabaseRepository
+    public class DatabaseRepository 
     {
+        private readonly string _connectionString;
 
-        private readonly string _masterConnection;
-
-        public DatabaseRepository(IConfiguration configuration)
+        public DatabaseRepository(IConfiguration config)
         {
-            _masterConnection = configuration.GetConnectionString("MasterConnection");
+            _connectionString = config.GetConnectionString("MasterConnection");
         }
 
-        public async Task CreateDatabaseAsync(string dbName)
+        public async Task<bool> TestConnectionAsync()
         {
-            var sql = $"CREATE DATABASE [{dbName}]";
+            using var connection = new SqlConnection(_connectionString);
+            try
+            {
+                await connection.OpenAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
-            using var connection = new SqlConnection(_masterConnection);
+        public async Task CrearBaseDeDatosAsync(string nombre)
+        {
+            using var connection = new SqlConnection(_connectionString);
             await connection.OpenAsync();
-
-            using var command = new SqlCommand(sql, connection);
+            var command = connection.CreateCommand();
+            command.CommandText = $"CREATE DATABASE [{nombre}]";
             await command.ExecuteNonQueryAsync();
         }
     }

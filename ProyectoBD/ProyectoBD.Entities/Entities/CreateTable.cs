@@ -9,11 +9,7 @@ namespace ProyectoBD.Repositories.Entities
     public class CreateTable
     {
         public string TableName { get; set; }
-        public List<ColumnDefinition> Columns { get; set; }
-        public CreateTable()
-        {
-            Columns = new List<ColumnDefinition>();
-        }
+        public List<ColumnDefinition> Columns { get; set; } = new();
     }
 
     public class ColumnDefinition
@@ -22,6 +18,5 @@ namespace ProyectoBD.Repositories.Entities
         public string DataType { get; set; }
         public bool IsPrimaryKey { get; set; }
         public bool IsNullable { get; set; }
-        public string DefaultValue { get; set; }
     }
 }

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Services\" />
+    <ProjectReference Include="..\ProyectoBD.Entities\ProyectoBD.Entities.csproj" />
     <ProjectReference Include="..\ProyectoBD.Repositories\ProyectoBD.Repositories.csproj" />
   </ItemGroup>
 
