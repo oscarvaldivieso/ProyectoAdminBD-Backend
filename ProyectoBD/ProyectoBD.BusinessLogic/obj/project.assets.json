@@ -1,30 +1,67 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "ProyectoBD.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/ProyectoBD.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProyectoBD.Entities.dll": {}
+        }
+      },
+      "ProyectoBD.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ProyectoBD.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProyectoBD.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProyectoBD.Repositories.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProyectoBD.Entities/1.0.0": {
+      "type": "project",
+      "path": "../ProyectoBD.Entities/ProyectoBD.Entities.csproj",
+      "msbuildProject": "../ProyectoBD.Entities/ProyectoBD.Entities.csproj"
+    },
+    "ProyectoBD.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../ProyectoBD.Repositories/ProyectoBD.Repositories.csproj",
+      "msbuildProject": "../ProyectoBD.Repositories/ProyectoBD.Repositories.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "ProyectoBD.Repositories >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Personal Computer\\.nuget\\packages\\": {},
+    "C:\\Users\\fa538\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
       "projectName": "ProyectoBD.BusinessLogic",
-      "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\Personal Computer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\obj\\",
+      "projectPath": "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\fa538\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Personal Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fa538\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -39,7 +76,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj": {
+              "projectPath": "C:\\Users\\fa538\\OneDrive\\Escritorio\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
