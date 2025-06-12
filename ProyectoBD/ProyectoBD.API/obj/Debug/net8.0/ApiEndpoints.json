@@ -58,6 +58,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ProyectoBD.API.Controllers.TablesController",
+    "Method": "EliminarTabla",
+    "RelativePath": "delete-table",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "databaseName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombreTabla",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoBD.API.Controllers.TablesController",
+    "Method": "ListarTablas",
+    "RelativePath": "list-tables",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "databaseName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ProyectoBD.API.Controllers.DatabaseController",
     "Method": "TestConnection",
     "RelativePath": "TestConnection",

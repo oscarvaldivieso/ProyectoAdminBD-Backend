@@ -42,6 +42,36 @@ namespace ProyectoBD.API.Controllers
             }
         }
 
+
+        [HttpDelete("delete-table")]
+        public async Task<IActionResult> EliminarTabla(string databaseName, string nombreTabla)
+        {
+            try
+            {
+                await _repository.EliminarTablaAsync(databaseName, nombreTabla);
+                return Ok($"Tabla '{nombreTabla}' eliminada correctamente de la base '{databaseName}'.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("list-tables")]
+        public async Task<IActionResult> ListarTablas(string databaseName)
+        {
+            try
+            {
+                var tablas = await _repository.ListarTablasAsync(databaseName);
+                return Ok(tablas);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
         public IActionResult Index()
         {
             return View();
