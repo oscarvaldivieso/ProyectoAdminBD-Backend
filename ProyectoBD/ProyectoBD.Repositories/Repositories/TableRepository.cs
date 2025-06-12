@@ -1,4 +1,5 @@
-﻿using ProyectoBD.Repositories.Entities;
+﻿using ProyectoBD.Entities.Entities;
+using ProyectoBD.Repositories.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,10 +11,9 @@ namespace ProyectoBD.Repositories.Repositories
 {
     public class TableRepository
     {
-
         public async Task CrearTablaAsync(string databaseName, CreateTable table)
         {
-            var server = "DESKTOP-LQVPKMF\\SQLEXPRESS";
+            var server = "DESKTOP-QAOLMF0\\SQLEXPRESS";
             var connectionString = $"Server={server};Database={databaseName};Trusted_Connection=True;";
 
             using var connection = new SqlConnection(connectionString);
@@ -36,6 +36,27 @@ namespace ProyectoBD.Repositories.Repositories
             using var command = connection.CreateCommand();
             command.CommandText = createTableSql;
             await command.ExecuteNonQueryAsync();
+        }
+
+        public async Task AlterTableAsync(string databaseName, AlterTable alterTable)
+        {
+            var server = "DESKTOP-QAOLMF0\\SQLEXPRESS";
+            var connectionString = $"Server={server};Database={databaseName};Trusted_Connection=True;";
+            using var connection = new SqlConnection(connectionString);
+            await connection.OpenAsync();
+            foreach (var alteration in alterTable.Alterations)
+            {
+                string sql = alteration.Operation switch
+                {
+                    "ADD" => $"ALTER TABLE [{alterTable.TableName}] ADD [{alteration.ColumnName}] {alteration.DataType} {(alteration.IsNullable.HasValue && alteration.IsNullable.Value ? "NULL" : "NOT NULL")};",
+                    "DROP" => $"ALTER TABLE [{alterTable.TableName}] DROP COLUMN [{alteration.ColumnName}];",
+                    "ALTER" => $"ALTER TABLE [{alterTable.TableName}] ALTER COLUMN [{alteration.ColumnName}] {alteration.DataType} {(alteration.IsNullable.HasValue && alteration.IsNullable.Value ? "NULL" : "NOT NULL")};",
+                    _ => throw new InvalidOperationException("Operación no soportada")
+                };
+                using var command = connection.CreateCommand();
+                command.CommandText = sql;
+                await command.ExecuteNonQueryAsync();
+            }
         }
 
     }

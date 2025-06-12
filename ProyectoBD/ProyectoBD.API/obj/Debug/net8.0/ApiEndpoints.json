@@ -17,6 +17,27 @@
   },
   {
     "ContainingType": "ProyectoBD.API.Controllers.TablesController",
+    "Method": "AlterTable",
+    "RelativePath": "alter-table/{databaseName}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "databaseName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "alterTable",
+        "Type": "ProyectoBD.Entities.Entities.AlterTable",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoBD.API.Controllers.TablesController",
     "Method": "CrearTabla",
     "RelativePath": "create-table/{databaseName}",
     "HttpMethod": "POST",
