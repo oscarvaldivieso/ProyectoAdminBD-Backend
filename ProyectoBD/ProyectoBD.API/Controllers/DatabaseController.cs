@@ -31,5 +31,14 @@ namespace ProyectoBD.API.Controllers
             await _repository.CrearBaseDeDatosAsync(nombre);
             return Ok($"Base de datos '{nombre}' creada.");
         }
+
+
+        [HttpGet("databases-list")]
+        public async Task<IActionResult> Listar()
+        {
+            var lista = await _repository.ListarBasesDeDatosAsync();
+            return Ok(lista);
+        }
+
     }
 }

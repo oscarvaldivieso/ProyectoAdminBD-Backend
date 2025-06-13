@@ -18,6 +18,16 @@ var connectionString = builder.Configuration.GetConnectionString("MasterConnecti
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSingleton(connectionString);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("http://localhost:4200/", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,6 +36,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("http://localhost:4200/");
 
 app.UseHttpsRedirection();
 

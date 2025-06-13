@@ -39,6 +39,18 @@
         }
       }
     },
+    "/databases-list": {
+      "get": {
+        "tags": [
+          "Database"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/create-table/{databaseName}": {
       "post": {
         "tags": [

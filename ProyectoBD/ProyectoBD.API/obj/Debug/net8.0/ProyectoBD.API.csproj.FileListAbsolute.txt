@@ -103,3 +103,4 @@ C:\Users\LAB1\Desktop\ProyectoAdminBD-Backend\ProyectoBD\ProyectoBD.API\obj\Debu
 C:\Users\LAB1\Desktop\ProyectoAdminBD-Backend\ProyectoBD\ProyectoBD.API\obj\Debug\net8.0\ProyectoBD.API.genruntimeconfig.cache
 C:\Users\LAB1\Desktop\ProyectoAdminBD-Backend\ProyectoBD\ProyectoBD.API\obj\Debug\net8.0\ref\ProyectoBD.API.dll
 C:\Users\LAB1\Desktop\ProyectoAdminBD-Backend\ProyectoBD\ProyectoBD.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Personal Computer\Desktop\ProyectoAdminBD-Backend\ProyectoBD\ProyectoBD.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll

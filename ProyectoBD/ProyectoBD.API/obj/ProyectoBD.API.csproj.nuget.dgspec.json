@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\ProyectoBD.API.csproj": {}
+    "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\ProyectoBD.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\ProyectoBD.API.csproj": {
+    "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\ProyectoBD.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\ProyectoBD.API.csproj",
+        "projectUniqueName": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\ProyectoBD.API.csproj",
         "projectName": "ProyectoBD.API",
-        "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\ProyectoBD.API.csproj",
-        "packagesPath": "C:\\Users\\LAB1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\obj\\",
+        "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\ProyectoBD.API.csproj",
+        "packagesPath": "C:\\Users\\Personal Computer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LAB1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Personal Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,14 +33,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj"
+              "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj"
               },
-              "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
-                "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj"
+              "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
+                "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj"
               },
-              "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj": {
-                "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj"
+              "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj": {
+                "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj"
               }
             }
           }
@@ -89,20 +89,20 @@
         }
       }
     },
-    "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj": {
+    "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
         "projectName": "ProyectoBD.BusinessLogic",
-        "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
-        "packagesPath": "C:\\Users\\LAB1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\obj\\",
+        "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\Personal Computer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LAB1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Personal Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -118,11 +118,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
-                "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj"
+              "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
+                "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj"
               },
-              "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj": {
-                "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj"
+              "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj": {
+                "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj"
               }
             }
           }
@@ -162,20 +162,20 @@
         }
       }
     },
-    "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
+    "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
         "projectName": "ProyectoBD.Entities",
-        "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
-        "packagesPath": "C:\\Users\\LAB1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\obj\\",
+        "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
+        "packagesPath": "C:\\Users\\Personal Computer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LAB1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Personal Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -228,20 +228,20 @@
         }
       }
     },
-    "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj": {
+    "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj",
         "projectName": "ProyectoBD.Repositories",
-        "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj",
-        "packagesPath": "C:\\Users\\LAB1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\obj\\",
+        "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj",
+        "packagesPath": "C:\\Users\\Personal Computer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LAB1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Personal Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -257,8 +257,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
-                "projectPath": "C:\\Users\\LAB1\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj"
+              "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj": {
+                "projectPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj"
               }
             }
           }

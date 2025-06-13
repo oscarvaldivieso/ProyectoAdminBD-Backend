@@ -58,6 +58,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ProyectoBD.API.Controllers.DatabaseController",
+    "Method": "Listar",
+    "RelativePath": "databases-list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ProyectoBD.API.Controllers.TablesController",
     "Method": "EliminarTabla",
     "RelativePath": "delete-table",

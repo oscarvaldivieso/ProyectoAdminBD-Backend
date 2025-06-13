@@ -12,7 +12,7 @@ namespace ProyectoBD.Repositories.Repositories
 {
     public class TableRepository
     {
-        public string servidor = "DESKTOP-FONUA2P\\SQLEXPRESS";
+        public string servidor = "DESKTOP-LQVPKMF\\SQLEXPRESS";
         public async Task CrearTablaAsync(string databaseName, CreateTable table)
         {
             var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
@@ -41,7 +41,6 @@ namespace ProyectoBD.Repositories.Repositories
 
         public async Task AlterTableAsync(string databaseName, AlterTable alterTable)
         {
-            var server = "DESKTOP-FONUA2P\\SQLEXPRESS";
             var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
             using var connection = new SqlConnection(connectionString);
             await connection.OpenAsync();
@@ -63,8 +62,7 @@ namespace ProyectoBD.Repositories.Repositories
 
         public async Task EliminarTablaAsync(string databaseName, string nombreTabla)
         {
-            var server = "DESKTOP-FONUA2P\\SQLEXPRESS";
-            var connectionString = $"Server={server};Database={databaseName};Trusted_Connection=True;";
+            var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
 
             using var connection = new SqlConnection(connectionString);
             await connection.OpenAsync();
@@ -82,7 +80,6 @@ namespace ProyectoBD.Repositories.Repositories
 
         public async Task<List<string>> ListarTablasAsync(string databaseName)
         {
-            var server = "DESKTOP-FONUA2P\\SQLEXPRESS";
             var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
 
             var tablas = new List<string>();
