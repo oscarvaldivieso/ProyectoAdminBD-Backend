@@ -1,65 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\",
+  "WorkspaceRootPath": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|solutionrelative:proyectobd.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|solutionrelative:proyectobd.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\repositories\\tablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\repositories\\tablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|solutionrelative:proyectobd.repositories\\repositories\\tablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|solutionrelative:proyectobd.api\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\repositories\\itablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|solutionrelative:proyectobd.repositories\\repositories\\itablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\controllers\\tablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|solutionrelative:proyectobd.api\\controllers\\tablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\repositories\\databaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\repositories\\databaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|solutionrelative:proyectobd.repositories\\repositories\\databaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.entities\\entities\\createtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|solutionrelative:proyectobd.api\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\controllers\\tablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|solutionrelative:proyectobd.api\\controllers\\tablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.entities\\entities\\createtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|solutionrelative:proyectobd.entities\\entities\\createtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.businesslogic\\serviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.businesslogic\\serviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|solutionrelative:proyectobd.businesslogic\\serviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\repositories\\idatabaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\repositories\\idatabaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|solutionrelative:proyectobd.repositories\\repositories\\idatabaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17A9874C-586E-4D23-9937-E99263F02E5B}|ProyectoBD.API\\ProyectoBD.API.csproj|solutionrelative:proyectobd.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.entities\\proyectobd.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.entities\\proyectobd.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|solutionrelative:proyectobd.entities\\proyectobd.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.businesslogic\\proyectobd.businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.businesslogic\\proyectobd.businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|solutionrelative:proyectobd.businesslogic\\proyectobd.businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.repositories\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FDD0B75-958E-4A34-8494-53E7EABCD905}|ProyectoBD.Repositories\\ProyectoBD.Repositories.csproj|solutionrelative:proyectobd.repositories\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBD154C0-4294-4EFC-8C76-A9F10DD41EAB}|ProyectoBD.Entities\\ProyectoBD.Entities.csproj|solutionrelative:proyectobd.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|c:\\users\\personal computer\\desktop\\proyectoadminbd-backend\\proyectobd\\proyectobd.businesslogic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|c:\\users\\lab1\\documents\\academia\\proyectoadminbd-backend\\proyectobd\\proyectobd.businesslogic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76F10CC0-73E4-4E05-9030-715A7A187EB7}|ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj|solutionrelative:proyectobd.businesslogic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -70,41 +74,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 651,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TablesController.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\TablesController.cs",
-              "RelativeDocumentMoniker": "ProyectoBD.API\\Controllers\\TablesController.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\TablesController.cs",
-              "RelativeToolTip": "ProyectoBD.API\\Controllers\\TablesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ITableRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\ITableRepository.cs",
+              "RelativeDocumentMoniker": "ProyectoBD.Repositories\\Repositories\\ITableRepository.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\ITableRepository.cs",
+              "RelativeToolTip": "ProyectoBD.Repositories\\Repositories\\ITableRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:24:42.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T14:42:23.202Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "TableRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\TableRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\TableRepository.cs",
               "RelativeDocumentMoniker": "ProyectoBD.Repositories\\Repositories\\TableRepository.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\TableRepository.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\TableRepository.cs",
               "RelativeToolTip": "ProyectoBD.Repositories\\Repositories\\TableRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:24:08.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T05:24:08.414Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CreateTable.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\Entities\\CreateTable.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\Entities\\CreateTable.cs",
               "RelativeDocumentMoniker": "ProyectoBD.Entities\\Entities\\CreateTable.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\Entities\\CreateTable.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\Entities\\CreateTable.cs",
               "RelativeToolTip": "ProyectoBD.Entities\\Entities\\CreateTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -112,11 +118,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ServiceConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ServiceConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ServiceConfiguration.cs",
               "RelativeDocumentMoniker": "ProyectoBD.BusinessLogic\\ServiceConfiguration.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ServiceConfiguration.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ServiceConfiguration.cs",
               "RelativeToolTip": "ProyectoBD.BusinessLogic\\ServiceConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -126,48 +132,70 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Program.cs",
               "RelativeDocumentMoniker": "ProyectoBD.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Program.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Program.cs",
               "RelativeToolTip": "ProyectoBD.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T04:51:41.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DatabaseController.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\DatabaseController.cs",
-              "RelativeDocumentMoniker": "ProyectoBD.API\\Controllers\\DatabaseController.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\DatabaseController.cs",
-              "RelativeToolTip": "ProyectoBD.API\\Controllers\\DatabaseController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwCMAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\appsettings.json",
+              "RelativeDocumentMoniker": "ProyectoBD.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\appsettings.json",
+              "RelativeToolTip": "ProyectoBD.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-11T04:21:19.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TablesController.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\TablesController.cs",
+              "RelativeDocumentMoniker": "ProyectoBD.API\\Controllers\\TablesController.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\TablesController.cs",
+              "RelativeToolTip": "ProyectoBD.API\\Controllers\\TablesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T04:41:39.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T05:24:42.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatabaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\DatabaseRepository.cs",
+              "RelativeDocumentMoniker": "ProyectoBD.Repositories\\Repositories\\DatabaseRepository.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\DatabaseRepository.cs",
+              "RelativeToolTip": "ProyectoBD.Repositories\\Repositories\\DatabaseRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwBEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T04:38:53.919Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "DatabaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\DatabaseRepository.cs",
-              "RelativeDocumentMoniker": "ProyectoBD.Repositories\\Repositories\\DatabaseRepository.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\DatabaseRepository.cs",
-              "RelativeToolTip": "ProyectoBD.Repositories\\Repositories\\DatabaseRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCUAAAApAAAAAAAAAA==",
+              "Title": "DatabaseController.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\DatabaseController.cs",
+              "RelativeDocumentMoniker": "ProyectoBD.API\\Controllers\\DatabaseController.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\DatabaseController.cs",
+              "RelativeToolTip": "ProyectoBD.API\\Controllers\\DatabaseController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwCMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T04:38:53.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T04:41:39.689Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IDatabaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\IDatabaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\IDatabaseRepository.cs",
               "RelativeDocumentMoniker": "ProyectoBD.Repositories\\Repositories\\IDatabaseRepository.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\IDatabaseRepository.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Repositories\\IDatabaseRepository.cs",
               "RelativeToolTip": "ProyectoBD.Repositories\\Repositories\\IDatabaseRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -175,24 +203,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\appsettings.json",
-              "RelativeDocumentMoniker": "ProyectoBD.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\appsettings.json",
-              "RelativeToolTip": "ProyectoBD.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-11T04:21:19.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ProyectoBD.BusinessLogic.csproj",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
               "RelativeDocumentMoniker": "ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
               "RelativeToolTip": "ProyectoBD.BusinessLogic\\ProyectoBD.BusinessLogic.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -200,11 +215,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ProyectoBD.Entities.csproj",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
               "RelativeDocumentMoniker": "ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
               "RelativeToolTip": "ProyectoBD.Entities\\ProyectoBD.Entities.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -212,11 +227,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "ProyectoBD.API\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.API\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "ProyectoBD.API\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -224,11 +239,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\Class1.cs",
               "RelativeDocumentMoniker": "ProyectoBD.BusinessLogic\\Class1.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\Class1.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.BusinessLogic\\Class1.cs",
               "RelativeToolTip": "ProyectoBD.BusinessLogic\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -236,11 +251,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Class1.cs",
               "RelativeDocumentMoniker": "ProyectoBD.Repositories\\Class1.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Class1.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Repositories\\Class1.cs",
               "RelativeToolTip": "ProyectoBD.Repositories\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -248,11 +263,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\Class1.cs",
               "RelativeDocumentMoniker": "ProyectoBD.Entities\\Class1.cs",
-              "ToolTip": "C:\\Users\\Personal Computer\\Desktop\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\Class1.cs",
+              "ToolTip": "C:\\Users\\LAB1\\Documents\\Academia\\ProyectoAdminBD-Backend\\ProyectoBD\\ProyectoBD.Entities\\Class1.cs",
               "RelativeToolTip": "ProyectoBD.Entities\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
