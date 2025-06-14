@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoBD.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfbb046ffb33dd57411f3e35347a52340f6c91d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c82315a2713d8b0ffd77cc3932c441a4ea9bfdae")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoBD.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoBD.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
