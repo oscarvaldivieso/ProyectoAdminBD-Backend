@@ -4,6 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<DatabaseRepository>();
 builder.Services.AddScoped<TableRepository>();
+builder.Services.AddScoped<FunctionRepository>();
+builder.Services.AddScoped<ViewRepository>();
+builder.Services.AddScoped<StoredProcedureRepository>();
 
 
 // Add services to the container.
