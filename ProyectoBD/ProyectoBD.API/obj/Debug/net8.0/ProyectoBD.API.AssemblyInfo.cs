@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoBD.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c82315a2713d8b0ffd77cc3932c441a4ea9bfdae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+831abc69b82a29ab60539bcd4356e25cd4263d6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoBD.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoBD.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoBD.Repositories.Repositories
 {
-    class ViewRepository
+    public class ViewRepository
     {
     }
 }
