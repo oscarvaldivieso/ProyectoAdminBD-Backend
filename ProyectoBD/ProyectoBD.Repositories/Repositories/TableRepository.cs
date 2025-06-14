@@ -12,7 +12,7 @@ namespace ProyectoBD.Repositories.Repositories
 {
     public class TableRepository
     {
-        public string servidor = "DESKTOP-DPLOFJ2\\SQLEXPRESS";
+        public string servidor = "DESKTOP-LQVPKMF\\SQLEXPRESS";
         public async Task CrearTablaAsync(string databaseName, CreateTable table)
         {
             var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
