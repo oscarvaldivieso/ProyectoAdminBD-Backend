@@ -12,7 +12,7 @@ namespace ProyectoBD.Repositories.Repositories
     public class DatabaseRepository 
     {
         private readonly string _connectionString;
-        public string servidor = "DESKTOP-LQVPKMF\\SQLEXPRESS";
+        public string servidor = "DESKTOP-BL38JV6";
         public DatabaseRepository(IConfiguration config)
         {
             _connectionString = config.GetConnectionString("MasterConnection");
