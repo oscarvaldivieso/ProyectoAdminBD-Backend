@@ -5,8 +5,11 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Text.Json;
+
 
 namespace ProyectoBD.Repositories.Repositories
 {
@@ -101,6 +104,54 @@ namespace ProyectoBD.Repositories.Repositories
 
             return tablas;
         }
+
+
+        //DML Operations
+
+        public async Task InsertAsync(InsertRequest request)
+        {
+            var connectionString = $"Server= {servidor} ;Database={request.DatabaseName};Trusted_Connection=True;";
+
+            using var connection = new SqlConnection(connectionString);
+            await connection.OpenAsync();
+
+            var columns = string.Join(", ", request.Data.Keys.Select(k => $"[{k}]"));
+            var parameters = string.Join(", ", request.Data.Keys.Select(k => $"@{k}"));
+
+            var sql = $"INSERT INTO [{request.TableName}] ({columns}) VALUES ({parameters})";
+
+            using var command = new SqlCommand(sql, connection);
+
+            foreach (var pair in request.Data)
+            {
+                var paramValue = ConvertJsonElement(pair.Value);
+
+                command.Parameters.AddWithValue($"@{pair.Key}", paramValue ?? DBNull.Value);
+            }
+
+            await command.ExecuteNonQueryAsync();
+        }
+
+        // Método que convierte JsonElement al tipo apropiado
+        private object ConvertJsonElement(object value)
+        {
+            if (value is JsonElement jsonElement)
+            {
+                return jsonElement.ValueKind switch
+                {
+                    JsonValueKind.String => jsonElement.GetString(),
+                    JsonValueKind.Number => jsonElement.TryGetInt32(out var i) ? i :
+                                            jsonElement.TryGetDouble(out var d) ? d : jsonElement.ToString(),
+                    JsonValueKind.True => true,
+                    JsonValueKind.False => false,
+                    JsonValueKind.Null => DBNull.Value,
+                    _ => jsonElement.ToString()
+                };
+            }
+
+            return value;
+        }
+
 
 
     }

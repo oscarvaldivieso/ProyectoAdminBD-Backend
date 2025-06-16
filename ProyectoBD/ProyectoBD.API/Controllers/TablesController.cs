@@ -76,5 +76,23 @@ namespace ProyectoBD.API.Controllers
         {
             return View();
         }
+
+
+        //DML Operations
+
+        [HttpPost("insert")]
+        public async Task<IActionResult> Insert([FromBody] InsertRequest request)
+        {
+            try
+            {
+                await _repository.InsertAsync(request);
+                return Ok("Insert realizado con éxito.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error al insertar: {ex.Message}");
+            }
+        }
+
     }
 }
