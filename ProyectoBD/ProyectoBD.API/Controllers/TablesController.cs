@@ -153,6 +153,21 @@ namespace ProyectoBD.API.Controllers
             }
         }
 
+        [HttpPost("columns-list")]
+        public async Task<IActionResult> ListarColumnas([FromBody] ColumnasRequest request)
+        {
+            try
+            {
+                var columnas = await _repository.ObtenerColumnasAsync(request.DatabaseName, request.TableName, request.Motor);
+                return Ok(columnas);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { mensaje = ex.Message });
+            }
+        }
+
+
 
     }
 }

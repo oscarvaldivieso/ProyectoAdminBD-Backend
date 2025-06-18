@@ -196,6 +196,39 @@ namespace ProyectoBD.Repositories.Repositories
             await command.ExecuteNonQueryAsync();
         }
 
+        public async Task<List<string>> ObtenerColumnasAsync(string databaseName, string tableName, MotorBaseDatos motor)
+        {
+            if (string.IsNullOrWhiteSpace(tableName) || !Regex.IsMatch(tableName, @"^[a-zA-Z0-9_]+$"))
+                throw new ArgumentException("Nombre de tabla inválido.");
+
+            using var connection = await AbrirConexionAsync(databaseName, motor);
+
+            string sql = motor switch
+            {
+                MotorBaseDatos.SqlServer =>
+                    $"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{tableName}'",
+
+                MotorBaseDatos.MySql =>
+                    $"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = '{databaseName}' AND TABLE_NAME = '{tableName}'",
+
+                _ => throw new Exception("Motor no soportado")
+            };
+
+            using var command = CrearComando(connection, sql);
+            using var reader = await command.ExecuteReaderAsync();
+
+            var columnas = new List<string>();
+
+            while (await reader.ReadAsync())
+            {
+                columnas.Add(reader.GetString(0));
+            }
+
+            return columnas;
+        }
+
+
+
 
 
 

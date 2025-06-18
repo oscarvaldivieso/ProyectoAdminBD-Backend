@@ -37,4 +37,11 @@ namespace ProyectoBD.Entities.Entities
         public MotorBaseDatos Motor { get; set; }
     }
 
+    public class ColumnasRequest
+    {
+        public string DatabaseName { get; set; }
+        public string TableName { get; set; }
+        public MotorBaseDatos Motor { get; set; }
+    }
+
 }
