@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoBD.Repositories.Repositories;
 using static ProyectoBD.Repositories.Repositories.DatabaseRepository;
+using ProyectoBD.Entities.Entities;
 
 namespace ProyectoBD.API.Controllers
 {
@@ -19,7 +20,7 @@ namespace ProyectoBD.API.Controllers
         }
 
         [HttpGet("TestConnection")]
-        public async Task<IActionResult> TestConnection([FromQuery] DatabaseRepository.MotorBaseDatos motor)
+        public async Task<IActionResult> TestConnection([FromQuery] MotorBaseDatos motor)
         {
             var success = await _repository.TestConnectionAsync(motor);
             return Ok(success ? "Conexión exitosa" : "Fallo en la conexión");

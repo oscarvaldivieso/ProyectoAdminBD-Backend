@@ -6,17 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using ProyectoBD.Entities.Entities;
 
 
 namespace ProyectoBD.Repositories.Repositories
 {
     public class DatabaseRepository 
     {
-        public enum MotorBaseDatos
-        {
-            SqlServer,
-            MySql
-        }
 
         private readonly string _sqlServerConnectionString;
         private readonly string _mySqlConnectionString;

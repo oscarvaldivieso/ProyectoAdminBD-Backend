@@ -98,17 +98,44 @@ namespace ProyectoBD.API.Controllers
 
         //DML Operations
 
-        [HttpPost("insert")]
-        public async Task<IActionResult> Insert([FromBody] InsertRequest request)
+        [HttpPost("insertar")]
+        public async Task<IActionResult> Insertar([FromBody] InsertRequest request)
         {
             try
             {
-                await _repository.InsertAsync(request);
-                return Ok("Insert realizado con éxito.");
+                await _repository.EjecutarInsertAsync(request.DatabaseName, request.Sql, request.Motor);
+                return Ok(new { mensaje = "Insert ejecutado correctamente." });
+            }
+            catch (ArgumentException argEx)
+            {
+                return BadRequest(new { error = "Validación: " + argEx.Message });
+            }
+            catch (MySql.Data.MySqlClient.MySqlException mysqlEx)
+            {
+                return BadRequest(new { error = "MySQL: " + mysqlEx.Message });
+            }
+            catch (System.Data.SqlClient.SqlException sqlEx)
+            {
+                return BadRequest(new { error = "SQL Server: " + sqlEx.Message });
             }
             catch (Exception ex)
             {
-                return BadRequest($"Error al insertar: {ex.Message}");
+                return StatusCode(500, new { error = "Error inesperado: " + ex.Message });
+            }
+        }
+
+
+        [HttpPost("consultar")]
+        public async Task<IActionResult> Consultar([FromBody] ConsultaTablaRequest request)
+        {
+            try
+            {
+                var registros = await _repository.ObtenerRegistrosAsync(request.DatabaseName, request.TableName, request.Motor);
+                return Ok(registros);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { mensaje = ex.Message });
             }
         }
 

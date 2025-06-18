@@ -12,17 +12,15 @@ using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using System.Data;
-
+using ProyectoBD.Entities.Entities;
 
 namespace ProyectoBD.Repositories.Repositories
 {
+    
+
     public class TableRepository
     {
-        public enum MotorBaseDatos
-        {
-            SqlServer,
-            MySql
-        }
+        
 
         private readonly string _sqlServerConnectionString;
         private readonly string _mySqlConnectionString;
@@ -124,30 +122,65 @@ namespace ProyectoBD.Repositories.Repositories
 
         //DML Operations
 
-        public async Task InsertAsync(InsertRequest request)
+        public async Task EjecutarInsertAsync(string databaseName, string sql, MotorBaseDatos motor)
         {
-            var connectionString = $"Server= {servidor} ;Database={request.DatabaseName};Trusted_Connection=True;";
+            if (string.IsNullOrWhiteSpace(sql))
+                throw new ArgumentException("La consulta SQL no puede estar vacía.");
 
-            using var connection = new SqlConnection(connectionString);
-            await connection.OpenAsync();
+            var trimmedSql = sql.TrimStart().ToUpperInvariant();
 
-            var columns = string.Join(", ", request.Data.Keys.Select(k => $"[{k}]"));
-            var parameters = string.Join(", ", request.Data.Keys.Select(k => $"@{k}"));
+            if (!trimmedSql.StartsWith("INSERT INTO"))
+                throw new ArgumentException("Solo se permiten sentencias que comienzan con 'INSERT INTO'.");
 
-            var sql = $"INSERT INTO [{request.TableName}] ({columns}) VALUES ({parameters})";
+            if (!trimmedSql.Contains("VALUES"))
+                throw new ArgumentException("La sentencia INSERT debe contener la cláusula 'VALUES'.");
 
-            using var command = new SqlCommand(sql, connection);
+            if (sql.Contains(";"))
+                throw new ArgumentException("No se permiten múltiples sentencias (no uses ';').");
 
-            foreach (var pair in request.Data)
-            {
-                var paramValue = ConvertJsonElement(pair.Value);
+            // Validaciones por motor
+            if (motor == MotorBaseDatos.MySql && sql.Contains("IDENTITY", StringComparison.OrdinalIgnoreCase))
+                throw new ArgumentException("'IDENTITY' es una palabra reservada de SQL Server, no válida en MySQL.");
 
-                command.Parameters.AddWithValue($"@{pair.Key}", paramValue ?? DBNull.Value);
-            }
+            if (motor == MotorBaseDatos.SqlServer && sql.Contains("AUTO_INCREMENT", StringComparison.OrdinalIgnoreCase))
+                throw new ArgumentException("'AUTO_INCREMENT' es una palabra reservada de MySQL, no válida en SQL Server.");
 
+            // Ejecución segura
+            using var connection = await AbrirConexionAsync(databaseName, motor);
+            using var command = CrearComando(connection, sql);
             await command.ExecuteNonQueryAsync();
         }
 
+
+        public async Task<List<Dictionary<string, object>>> ObtenerRegistrosAsync(string databaseName, string tableName, MotorBaseDatos motor)
+        {
+            if (string.IsNullOrWhiteSpace(tableName) || !Regex.IsMatch(tableName, @"^[a-zA-Z0-9_]+$"))
+                throw new ArgumentException("Nombre de tabla inválido.");
+
+            using var connection = await AbrirConexionAsync(databaseName, motor);
+            string sql = $"SELECT * FROM {(motor == MotorBaseDatos.MySql ? $"`{tableName}`" : $"[{tableName}]")}";
+
+            using var command = CrearComando(connection, sql);
+            using var reader = await command.ExecuteReaderAsync();
+
+            var resultados = new List<Dictionary<string, object>>();
+
+            while (await reader.ReadAsync())
+            {
+                var fila = new Dictionary<string, object>();
+
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    var nombreColumna = reader.GetName(i);
+                    var valor = reader.IsDBNull(i) ? null : reader.GetValue(i);
+                    fila[nombreColumna] = valor;
+                }
+
+                resultados.Add(fila);
+            }
+
+            return resultados;
+        }
 
 
 
