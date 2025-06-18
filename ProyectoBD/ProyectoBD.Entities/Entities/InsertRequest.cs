@@ -16,7 +16,7 @@ namespace ProyectoBD.Entities.Entities
     {
         public string Sql { get; set; }
         public string DatabaseName { get; set; }
-        public MotorBaseDatos Motor { get; set; } // Enum con MySql y SqlServer
+        public MotorBaseDatos Motor { get; set; }
     }
 
     public class ConsultaTablaRequest
@@ -25,4 +25,16 @@ namespace ProyectoBD.Entities.Entities
         public string TableName { get; set; }
         public MotorBaseDatos Motor { get; set; }
     }
+
+    public class RelacionRequest
+    {
+        public string DatabaseName { get; set; }
+        public string TablaOrigen { get; set; }        
+        public string ColumnaOrigen { get; set; }      
+        public string TablaReferencia { get; set; }    
+        public string ColumnaReferencia { get; set; }   
+        public string NombreRelacion { get; set; }     
+        public MotorBaseDatos Motor { get; set; }
+    }
+
 }

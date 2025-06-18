@@ -17,7 +17,7 @@ namespace ProyectoBD.Repositories.Repositories
         private readonly string _sqlServerConnectionString;
         private readonly string _mySqlConnectionString;
 
-        public string servidor = "DESKTOP-LQVPKMF\\SQLEXPRESS";
+        public string servidor = "OSCARVALDIVIESO";
         public DatabaseRepository(IConfiguration config)
         {
             _sqlServerConnectionString = config.GetConnectionString("SqlServerConnection");

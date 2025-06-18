@@ -139,5 +139,20 @@ namespace ProyectoBD.API.Controllers
             }
         }
 
+        [HttpPost("relation-create")]
+        public async Task<IActionResult> CrearRelacion([FromBody] RelacionRequest request)
+        {
+            try
+            {
+                await _repository.CrearRelacionAsync(request);
+                return Ok(new { mensaje = "Relación creada correctamente." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { mensaje = ex.Message });
+            }
+        }
+
+
     }
 }

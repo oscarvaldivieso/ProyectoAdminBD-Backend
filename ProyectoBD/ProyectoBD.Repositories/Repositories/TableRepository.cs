@@ -20,8 +20,6 @@ namespace ProyectoBD.Repositories.Repositories
 
     public class TableRepository
     {
-        
-
         private readonly string _sqlServerConnectionString;
         private readonly string _mySqlConnectionString;
 
@@ -31,7 +29,7 @@ namespace ProyectoBD.Repositories.Repositories
             _mySqlConnectionString = config.GetConnectionString("MySqlConnection");
         }
 
-        public string servidor = "DESKTOP-LQVPKMF\\SQLEXPRESS";
+        public string servidor = "OSCARVALDIVIESO";
         public async Task CrearTablaAsync(string databaseName, CreateTable table, MotorBaseDatos motor)
         {
             using var connection = await AbrirConexionAsync(databaseName, motor);
@@ -180,6 +178,22 @@ namespace ProyectoBD.Repositories.Repositories
             }
 
             return resultados;
+        }
+
+
+        public async Task CrearRelacionAsync(RelacionRequest request)
+        {
+            using var connection = await AbrirConexionAsync(request.DatabaseName, request.Motor);
+
+            string wrap(string nombre) => request.Motor == MotorBaseDatos.MySql ? $"`{nombre}`" : $"[{nombre}]";
+
+            string sql = $"ALTER TABLE {wrap(request.TablaOrigen)} " +
+                         $"ADD CONSTRAINT {wrap(request.NombreRelacion)} " +
+                         $"FOREIGN KEY ({wrap(request.ColumnaOrigen)}) " +
+                         $"REFERENCES {wrap(request.TablaReferencia)} ({wrap(request.ColumnaReferencia)});";
+
+            using var command = CrearComando(connection, sql);
+            await command.ExecuteNonQueryAsync();
         }
 
 
