@@ -17,9 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-var connectionString = builder.Configuration.GetConnectionString("MasterConnection");
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddSingleton(connectionString);
 
 builder.Services.AddCors(options =>
 {

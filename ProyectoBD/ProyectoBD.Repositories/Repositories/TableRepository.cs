@@ -9,92 +9,100 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 
 namespace ProyectoBD.Repositories.Repositories
 {
     public class TableRepository
     {
-        public string servidor = "DESKTOP-LQVPKMF\\SQLEXPRESS";
-        public async Task CrearTablaAsync(string databaseName, CreateTable table)
+        public enum MotorBaseDatos
         {
-            var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
+            SqlServer,
+            MySql
+        }
 
-            using var connection = new SqlConnection(connectionString);
-            await connection.OpenAsync();
+        private readonly string _sqlServerConnectionString;
+        private readonly string _mySqlConnectionString;
+
+        public TableRepository(IConfiguration config)
+        {
+            _sqlServerConnectionString = config.GetConnectionString("SqlServerConnection");
+            _mySqlConnectionString = config.GetConnectionString("MySqlConnection");
+        }
+
+        public string servidor = "DESKTOP-LQVPKMF\\SQLEXPRESS";
+        public async Task CrearTablaAsync(string databaseName, CreateTable table, MotorBaseDatos motor)
+        {
+            using var connection = await AbrirConexionAsync(databaseName, motor);
+
+            // Función para elegir el delimitador correcto
+            string Wrap(string name) => motor == MotorBaseDatos.MySql ? $"`{name}`" : $"[{name}]";
 
             var columnsSql = table.Columns.Select(c =>
             {
                 var nullable = c.IsNullable ? "NULL" : "NOT NULL";
-                return $"[{c.Name}] {c.DataType} {nullable}".Trim();
+                return $"{Wrap(c.Name)} {c.DataType} {nullable}".Trim();
             });
 
             var primaryKeys = table.Columns
                 .Where(c => c.IsPrimaryKey)
-                .Select(c => $"[{c.Name}]");
+                .Select(c => Wrap(c.Name));
 
             var pkSql = primaryKeys.Any() ? $", PRIMARY KEY ({string.Join(", ", primaryKeys)})" : "";
 
-            var createTableSql = $"CREATE TABLE [{table.TableName}] ({string.Join(", ", columnsSql)}{pkSql});";
+            var createTableSql = $"CREATE TABLE {Wrap(table.TableName)} ({string.Join(", ", columnsSql)}{pkSql});";
 
-            using var command = connection.CreateCommand();
-            command.CommandText = createTableSql;
+            using var command = CrearComando(connection, createTableSql);
             await command.ExecuteNonQueryAsync();
         }
 
-        public async Task AlterTableAsync(string databaseName, AlterTable alterTable)
+        public async Task AlterTableAsync(string databaseName, AlterTable alterTable, MotorBaseDatos motor)
         {
-            var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
-            using var connection = new SqlConnection(connectionString);
-            await connection.OpenAsync();
+            using var connection = await AbrirConexionAsync(databaseName, motor);
+
             foreach (var alteration in alterTable.Alterations)
             {
                 string sql = alteration.Operation switch
                 {
-                    "ADD" => $"ALTER TABLE [{alterTable.TableName}] ADD [{alteration.ColumnName}] {alteration.DataType} {(alteration.IsNullable.HasValue && alteration.IsNullable.Value ? "NULL" : "NOT NULL")};",
-                    "DROP" => $"ALTER TABLE [{alterTable.TableName}] DROP COLUMN [{alteration.ColumnName}];",
-                    "ALTER" => $"ALTER TABLE [{alterTable.TableName}] ALTER COLUMN [{alteration.ColumnName}] {alteration.DataType} {(alteration.IsNullable.HasValue && alteration.IsNullable.Value ? "NULL" : "NOT NULL")};",
+                    "ADD" => $"ALTER TABLE `{alterTable.TableName}` ADD `{alteration.ColumnName}` {alteration.DataType} {(alteration.IsNullable.GetValueOrDefault() ? "NULL" : "NOT NULL")};",
+                    "DROP" => $"ALTER TABLE `{alterTable.TableName}` DROP COLUMN `{alteration.ColumnName}`;",
+                    "ALTER" => $"ALTER TABLE `{alterTable.TableName}` MODIFY `{alteration.ColumnName}` {alteration.DataType} {(alteration.IsNullable.GetValueOrDefault() ? "NULL" : "NOT NULL")};",
                     _ => throw new InvalidOperationException("Operación no soportada")
                 };
-                using var command = connection.CreateCommand();
-                command.CommandText = sql;
+
+                using var command = CrearComando(connection, sql);
                 await command.ExecuteNonQueryAsync();
             }
         }
 
-
-        public async Task EliminarTablaAsync(string databaseName, string nombreTabla)
+        public async Task EliminarTablaAsync(string databaseName, string nombreTabla, MotorBaseDatos motor)
         {
-            var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
-
-            using var connection = new SqlConnection(connectionString);
-            await connection.OpenAsync();
-
-            // Validación opcional para evitar inyección
             if (!Regex.IsMatch(nombreTabla, @"^[a-zA-Z0-9_]+$"))
                 throw new ArgumentException("Nombre de tabla inválido.");
 
-            var dropSql = $"DROP TABLE [{nombreTabla}]";
+            using var connection = await AbrirConexionAsync(databaseName, motor);
+            var dropSql = $"DROP TABLE `{nombreTabla}`";
 
-            using var command = new SqlCommand(dropSql, connection);
+            using var command = CrearComando(connection, dropSql);
             await command.ExecuteNonQueryAsync();
         }
 
-
-        public async Task<List<string>> ListarTablasAsync(string databaseName)
+        public async Task<List<string>> ListarTablasAsync(string databaseName, MotorBaseDatos motor)
         {
-            var connectionString = $"Server={servidor};Database={databaseName};Trusted_Connection=True;";
-
+            using var connection = await AbrirConexionAsync(databaseName, motor);
             var tablas = new List<string>();
 
-            using var connection = new SqlConnection(connectionString);
-            await connection.OpenAsync();
+            string sql = motor switch
+            {
+                MotorBaseDatos.SqlServer => "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'",
+                MotorBaseDatos.MySql => "SHOW TABLES",
+                _ => throw new Exception("Motor no soportado")
+            };
 
-            var sql = @"SELECT TABLE_NAME 
-                FROM INFORMATION_SCHEMA.TABLES 
-                WHERE TABLE_TYPE = 'BASE TABLE'";
-
-            using var command = new SqlCommand(sql, connection);
+            using var command = CrearComando(connection, sql);
             using var reader = await command.ExecuteReaderAsync();
 
             while (await reader.ReadAsync())
@@ -132,7 +140,35 @@ namespace ProyectoBD.Repositories.Repositories
             await command.ExecuteNonQueryAsync();
         }
 
-        // Método que convierte JsonElement al tipo apropiado
+
+
+
+
+        // Helpers
+
+        private async Task<IDbConnection> AbrirConexionAsync(string databaseName, MotorBaseDatos motor)
+        {
+            IDbConnection conn = motor switch
+            {
+                MotorBaseDatos.SqlServer => new SqlConnection($"{_sqlServerConnectionString};Database={databaseName}"),
+                MotorBaseDatos.MySql => new MySqlConnection($"{_mySqlConnectionString};Database={databaseName}"),
+                _ => throw new Exception("Motor no soportado")
+            };
+
+            await ((dynamic)conn).OpenAsync(); // cast dinámico para usar OpenAsync
+            return conn;
+        }
+
+        private dynamic CrearComando(IDbConnection connection, string sql)
+        {
+            return connection switch
+            {
+                SqlConnection sqlConn => new SqlCommand(sql, sqlConn),
+                MySqlConnection mySqlConn => new MySqlCommand(sql, mySqlConn),
+                _ => throw new Exception("Conexión no soportada")
+            };
+        }
+
         private object ConvertJsonElement(object value)
         {
             if (value is JsonElement jsonElement)
@@ -151,7 +187,6 @@ namespace ProyectoBD.Repositories.Repositories
 
             return value;
         }
-
 
 
     }

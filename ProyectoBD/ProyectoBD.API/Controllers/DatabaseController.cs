@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoBD.Repositories.Repositories;
+using static ProyectoBD.Repositories.Repositories.DatabaseRepository;
 
 namespace ProyectoBD.API.Controllers
 {
@@ -18,25 +19,25 @@ namespace ProyectoBD.API.Controllers
         }
 
         [HttpGet("TestConnection")]
-        public async Task<IActionResult> TestConnection()
+        public async Task<IActionResult> TestConnection([FromQuery] DatabaseRepository.MotorBaseDatos motor)
         {
-            var success = await _repository.TestConnectionAsync();
+            var success = await _repository.TestConnectionAsync(motor);
             return Ok(success ? "Conexión exitosa" : "Fallo en la conexión");
         }
 
-
-        [HttpPost("{nombre}")]
-        public async Task<IActionResult> Crear(string nombre)
+        // POST: api/Database/crear?nombre=MiBD&motor=SqlServer
+        [HttpPost("create")]
+        public async Task<IActionResult> Crear([FromQuery] string nombre, [FromQuery] MotorBaseDatos motor)
         {
-            await _repository.CrearBaseDeDatosAsync(nombre);
-            return Ok($"Base de datos '{nombre}' creada.");
+            await _repository.CrearBaseDeDatosAsync(nombre, motor);
+            return Ok($"Base de datos '{nombre}' creada en {motor}.");
         }
 
-
+        // GET: api/Database/databases-list?motor=SqlServer
         [HttpGet("databases-list")]
-        public async Task<IActionResult> Listar()
+        public async Task<IActionResult> Listar([FromQuery] MotorBaseDatos motor)
         {
-            var lista = await _repository.ListarBasesDeDatosAsync();
+            var lista = await _repository.ListarBasesDeDatosAsync(motor);
             return Ok(lista);
         }
 
