@@ -38,22 +38,30 @@ namespace ProyectoBD.Repositories.Repositories
         {
             using var connection = await AbrirConexionAsync(databaseName, motor);
 
-            // Función para elegir el delimitador correcto
             string Wrap(string name) => motor == MotorBaseDatos.MySql ? $"`{name}`" : $"[{name}]";
 
-            var columnsSql = table.Columns.Select(c =>
+            var columnDefinitions = table.Columns.Select(c =>
             {
+                if (string.IsNullOrWhiteSpace(c.DataType))
+                    throw new ArgumentException($"La columna '{c.Name}' no tiene un tipo de dato definido.");
+
                 var nullable = c.IsNullable ? "NULL" : "NOT NULL";
-                return $"{Wrap(c.Name)} {c.DataType} {nullable}".Trim();
-            });
+                return $"{Wrap(c.Name)} {c.DataType} {nullable}";
+            }).ToList();
 
             var primaryKeys = table.Columns
                 .Where(c => c.IsPrimaryKey)
-                .Select(c => Wrap(c.Name));
+                .Select(c => Wrap(c.Name))
+                .ToList();
 
-            var pkSql = primaryKeys.Any() ? $", PRIMARY KEY ({string.Join(", ", primaryKeys)})" : "";
+            if (primaryKeys.Any())
+            {
+                columnDefinitions.Add($"PRIMARY KEY ({string.Join(", ", primaryKeys)})");
+            }
 
-            var createTableSql = $"CREATE TABLE {Wrap(table.TableName)} ({string.Join(", ", columnsSql)}{pkSql});";
+            var createTableSql = $"CREATE TABLE {Wrap(table.TableName)} ({string.Join(", ", columnDefinitions)});";
+
+            Console.WriteLine(createTableSql); // Para depuración
 
             using var command = CrearComando(connection, createTableSql);
             await command.ExecuteNonQueryAsync();
