@@ -60,18 +60,10 @@ namespace ProyectoBD.API.Controllers
         }
 
         [HttpDelete("delete-table")]
-        public async Task<IActionResult> EliminarTabla(string databaseName, string nombreTabla, [FromQuery] string motor)
+        public async Task<IActionResult> EliminarTabla([FromQuery] string databaseName, [FromQuery] string nombreTabla, [FromQuery] MotorBaseDatos motor)
         {
-            try
-            {
-                var motorEnum = ObtenerMotor(motor);
-                await _repository.EliminarTablaAsync(databaseName, nombreTabla, motorEnum);
-                return Ok($"Tabla '{nombreTabla}' eliminada correctamente de la base '{databaseName}'.");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var resultado = await _repository.EliminarTablaAsync(databaseName, nombreTabla, motor);
+            return Ok(resultado);
         }
 
         [HttpGet("list-tables")]

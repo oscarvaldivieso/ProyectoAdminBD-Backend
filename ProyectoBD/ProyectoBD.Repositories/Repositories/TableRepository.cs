@@ -82,16 +82,31 @@ namespace ProyectoBD.Repositories.Repositories
             }
         }
 
-        public async Task EliminarTablaAsync(string databaseName, string nombreTabla, MotorBaseDatos motor)
+        public async Task<object> EliminarTablaAsync(string databaseName, string nombreTabla, MotorBaseDatos motor)
         {
-            if (!Regex.IsMatch(nombreTabla, @"^[a-zA-Z0-9_]+$"))
-                throw new ArgumentException("Nombre de tabla inválido.");
+            if (string.IsNullOrWhiteSpace(nombreTabla))
+                throw new ArgumentException("El nombre de la tabla no puede estar vacío.");
 
-            using var connection = await AbrirConexionAsync(databaseName, motor);
-            var dropSql = $"DROP TABLE `{nombreTabla}`";
+            try
+            {
+                using var connection = await AbrirConexionAsync(databaseName, motor);
 
-            using var command = CrearComando(connection, dropSql);
-            await command.ExecuteNonQueryAsync();
+                string wrappedName = motor == MotorBaseDatos.MySql ? $"`{nombreTabla}`" : $"[{nombreTabla}]";
+                string dropSql = $"DROP TABLE {wrappedName}";
+
+                using var command = CrearComando(connection, dropSql);
+                await command.ExecuteNonQueryAsync();
+
+                return new { mensaje = $"La tabla '{nombreTabla}' fue eliminada correctamente." };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    mensaje = $"No se pudo eliminar la tabla '{nombreTabla}'.",
+                    error = ex.Message
+                };
+            }
         }
 
         public async Task<List<string>> ListarTablasAsync(string databaseName, MotorBaseDatos motor)
