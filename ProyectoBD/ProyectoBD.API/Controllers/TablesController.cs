@@ -168,6 +168,23 @@ namespace ProyectoBD.API.Controllers
         }
 
 
+        [HttpPost("script")]
+        public async Task<IActionResult> EjecutarScript([FromBody] SqlLibreRequest request)
+        {
+            try
+            {
+                await _repository.EjecutarScriptAsync(request);
+                return Ok(new { mensaje = "Script ejecutado correctamente." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { mensaje = ex.Message, error = ex.StackTrace });
+            }
+        }
+
+
+
+
 
     }
 }

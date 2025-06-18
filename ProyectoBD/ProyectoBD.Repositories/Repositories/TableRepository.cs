@@ -217,6 +217,8 @@ namespace ProyectoBD.Repositories.Repositories
             using var command = CrearComando(connection, sql);
             using var reader = await command.ExecuteReaderAsync();
 
+
+
             var columnas = new List<string>();
 
             while (await reader.ReadAsync())
@@ -226,6 +228,41 @@ namespace ProyectoBD.Repositories.Repositories
 
             return columnas;
         }
+
+
+        public async Task EjecutarScriptAsync(SqlLibreRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Sql))
+                throw new ArgumentException("El script SQL no puede estar vacío.");
+
+            if (request.Motor == MotorBaseDatos.MySql)
+            {
+                using var connection = new MySqlConnection($"{_mySqlConnectionString};Database={request.DatabaseName}");
+                await connection.OpenAsync();
+
+                var script = new MySqlScript(connection, request.Sql);
+                script.Delimiter = ";"; // para permitir múltiples statements
+                script.Execute();
+            }
+            else if (request.Motor == MotorBaseDatos.SqlServer)
+            {
+                using var connection = new SqlConnection($"{_sqlServerConnectionString};Database={request.DatabaseName}");
+                await connection.OpenAsync();
+
+                var batches = request.Sql.Split(new[] { "GO" }, StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (var batch in batches)
+                {
+                    using var command = new SqlCommand(batch, connection);
+                    await command.ExecuteNonQueryAsync();
+                }
+            }
+            else
+            {
+                throw new NotSupportedException("Motor no soportado.");
+            }
+        }
+
 
 
 
@@ -253,9 +290,10 @@ namespace ProyectoBD.Repositories.Repositories
             {
                 SqlConnection sqlConn => new SqlCommand(sql, sqlConn),
                 MySqlConnection mySqlConn => new MySqlCommand(sql, mySqlConn),
-                _ => throw new Exception("Conexión no soportada")
+                _ => throw new InvalidOperationException("Conexión no soportada")
             };
         }
+
 
         private object ConvertJsonElement(object value)
         {
