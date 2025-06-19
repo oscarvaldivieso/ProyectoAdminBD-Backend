@@ -90,31 +90,20 @@ namespace ProyectoBD.API.Controllers
 
         //DML Operations
 
-        [HttpPost("insertar")]
-        public async Task<IActionResult> Insertar([FromBody] InsertRequest request)
+        [HttpPost("ejecutar-dml")]
+        public async Task<IActionResult> EjecutarDML([FromBody] InsertRequest request)
         {
             try
             {
-                await _repository.EjecutarInsertAsync(request.DatabaseName, request.Sql, request.Motor);
-                return Ok(new { mensaje = "Insert ejecutado correctamente." });
-            }
-            catch (ArgumentException argEx)
-            {
-                return BadRequest(new { error = "Validación: " + argEx.Message });
-            }
-            catch (MySql.Data.MySqlClient.MySqlException mysqlEx)
-            {
-                return BadRequest(new { error = "MySQL: " + mysqlEx.Message });
-            }
-            catch (System.Data.SqlClient.SqlException sqlEx)
-            {
-                return BadRequest(new { error = "SQL Server: " + sqlEx.Message });
+                await _repository.EjecutarComandoDMLAsync(request.DatabaseName, request.Sql, request.Motor);
+                return Ok(new { mensaje = "Sentencia ejecutada correctamente." });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new { error = "Error inesperado: " + ex.Message });
+                return BadRequest(new { mensaje = "Error al ejecutar la sentencia.", error = ex.Message });
             }
         }
+
 
 
         [HttpPost("consultar")]

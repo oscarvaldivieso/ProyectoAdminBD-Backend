@@ -135,34 +135,42 @@ namespace ProyectoBD.Repositories.Repositories
 
         //DML Operations
 
-        public async Task EjecutarInsertAsync(string databaseName, string sql, MotorBaseDatos motor)
+        public async Task EjecutarComandoDMLAsync(string databaseName, string sql, MotorBaseDatos motor)
         {
             if (string.IsNullOrWhiteSpace(sql))
                 throw new ArgumentException("La consulta SQL no puede estar vacía.");
 
             var trimmedSql = sql.TrimStart().ToUpperInvariant();
 
-            if (!trimmedSql.StartsWith("INSERT INTO"))
-                throw new ArgumentException("Solo se permiten sentencias que comienzan con 'INSERT INTO'.");
+            // Validar que sea una sentencia DML soportada
+            bool esInsert = trimmedSql.StartsWith("INSERT INTO");
+            bool esUpdate = trimmedSql.StartsWith("UPDATE");
+            bool esDelete = trimmedSql.StartsWith("DELETE FROM");
 
-            if (!trimmedSql.Contains("VALUES"))
+            if (!(esInsert || esUpdate || esDelete))
+                throw new ArgumentException("Solo se permiten sentencias INSERT INTO, UPDATE o DELETE FROM.");
+
+            // Validación específica para INSERT
+            if (esInsert && !trimmedSql.Contains("VALUES"))
                 throw new ArgumentException("La sentencia INSERT debe contener la cláusula 'VALUES'.");
 
-            if (sql.Contains(";"))
-                throw new ArgumentException("No se permiten múltiples sentencias (no uses ';').");
+            // No permitir múltiples sentencias con punto y coma
+            if (sql.Contains(";") && sql.Count(c => c == ';') > 1)
+                throw new ArgumentException("No se permiten múltiples sentencias (no uses más de un ';').");
 
             // Validaciones por motor
             if (motor == MotorBaseDatos.MySql && sql.Contains("IDENTITY", StringComparison.OrdinalIgnoreCase))
-                throw new ArgumentException("'IDENTITY' es una palabra reservada de SQL Server, no válida en MySQL.");
+                throw new ArgumentException("'IDENTITY' es exclusivo de SQL Server y no válido en MySQL.");
 
             if (motor == MotorBaseDatos.SqlServer && sql.Contains("AUTO_INCREMENT", StringComparison.OrdinalIgnoreCase))
-                throw new ArgumentException("'AUTO_INCREMENT' es una palabra reservada de MySQL, no válida en SQL Server.");
+                throw new ArgumentException("'AUTO_INCREMENT' es exclusivo de MySQL y no válido en SQL Server.");
 
             // Ejecución segura
             using var connection = await AbrirConexionAsync(databaseName, motor);
             using var command = CrearComando(connection, sql);
             await command.ExecuteNonQueryAsync();
         }
+
 
 
         public async Task<List<Dictionary<string, object>>> ObtenerRegistrosAsync(string databaseName, string tableName, MotorBaseDatos motor)
